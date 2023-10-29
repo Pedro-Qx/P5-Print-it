@@ -18,21 +18,28 @@ const slidesImgTxt = [
 ]
 
 
-let dotSelection = document.querySelectorAll(".dot")
+
+let dots = document.getElementsByClassName("dots")[0];
 let arrowRight = document.getElementById("arrow_right")
 let arrowLeft = document.getElementById("arrow_left")
 let images = document.getElementById("images")
 let text = document.getElementById("text")
 let n = 0
 
-dotSelection[0].classList.add("dot_selected")
+slidesImgTxt.forEach(image => {
+	let dot = document.createElement("div")
+	dot.classList.add("dot")
+	dots.append(dot)
+})
+
+let dotSelection = document.querySelectorAll(".dot")
+
+dotSelection[n].classList.add("dot_selected")
 function right() {
 	dotSelection[n].classList.remove("dot_selected")
-	if (n < 4) {
-		n++
-	}
-	if (n > 3){
-		n=0
+	n++
+	if (n >= slidesImgTxt.length) {
+		n = 0
 	}
 	dotSelection[n].classList.add("dot_selected")
 	images.src = "./assets/images/slideshow/" + slidesImgTxt[n].image
@@ -41,11 +48,9 @@ function right() {
 
 function left() {
 	dotSelection[n].classList.remove("dot_selected")
-	if (n < 4) {
-		n--
-	}
-	if (n < 0){
-		n=3
+	n--
+	if (n < 0) {
+		n = slidesImgTxt.length - 1
 	}
 	dotSelection[n].classList.add("dot_selected")
 	images.src = "./assets/images/slideshow/" + slidesImgTxt[n].image
