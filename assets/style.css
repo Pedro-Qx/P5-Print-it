@@ -53,9 +53,9 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
-body {
+/*body {
 
-}
+}*/
 section {
 	margin-block: 6em;
 }
@@ -115,7 +115,7 @@ header {
 }
 .banner-img {
 	width: 100%;
-	height: 470px; 
+	height: 470px;
 	z-index: -1;
 	object-fit: cover;
 	object-position: center;
@@ -125,7 +125,7 @@ header {
 
 #banner #arrow_left {
 	position: absolute;
-	top:36vh; 
+	top:24vh; 
 	left:5vh; 
 	display:inline-block;
 	cursor: pointer;
@@ -134,7 +134,7 @@ header {
 }
 #banner #arrow_right {
 	position: absolute;
-	top:36vh;
+	top:24vh;
 	right:5vh;
 	display:inline-block;
 	cursor: pointer;
@@ -143,7 +143,7 @@ header {
 /* Gestion des points du carrousel */
 .dots {
 	position: absolute;
-	top: 460px;
+	top: 500px;
 	display: flex;
 }
 .dot {

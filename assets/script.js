@@ -33,8 +33,8 @@ slidesImgTxt.forEach(image => {
 })
 
 let dotSelection = document.querySelectorAll(".dot")
-
 dotSelection[n].classList.add("dot_selected")
+
 function right() {
 	dotSelection[n].classList.remove("dot_selected")
 	n++
